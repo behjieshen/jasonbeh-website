@@ -165,11 +165,11 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     {author.twitter && (
                       <AuthorSocialLink className="author-social-link">
                         <AuthorSocialLinkAnchor
-                          href={`https://twitter.com/${author.twitter}`}
+                          href={`https://linkedin.com/${author.twitter}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Twitter
+                          Linkedin
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}

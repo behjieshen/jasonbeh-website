@@ -17,9 +17,9 @@ export const SiteNavLogo = () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
-        logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+        logo: file(relativePath: { eq: "img/cover3.png" }) {
           childImageSharp {
-            fixed(quality: 100 width: 500) {
+            fixed(quality: 100, width: 500) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -29,11 +29,12 @@ export const SiteNavLogo = () => (
     // tslint:disable-next-line:react-this-binding-issue
     render={(data: SiteNavLogoProps) => (
       <Link className="site-nav-logo" css={SiteNavLogoStyles} to="/">
-        {data.logo ? (
+        {/* {data.logo ? (
           <img src={data.logo.childImageSharp.fixed.src} alt={config.title} />
         ) : (
           config.title
-        )}
+        )} */}
+        Jason Beh
       </Link>
     )}
   />
@@ -63,4 +64,3 @@ const SiteNavLogoStyles = css`
     height: 21px;
   }
 `;
-

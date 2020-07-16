@@ -9,7 +9,7 @@ import { colors } from '../../styles/colors';
 import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
-import { Twitter } from '../icons/twitter';
+import { twitter } from '../icons/twitter';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -92,10 +92,10 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <Link to="/">Home</Link>
               </li>
               <li role="menuitem">
-                <Link to="/about">About</Link>
+                <Link to="/tags/portfolio">Portfolio</Link>
               </li>
               <li role="menuitem">
-                <Link to="/tags/getting-started/">Getting Started</Link>
+                <Link to="/tags/article">Articles</Link>
               </li>
             </ul>
             {isPost && (
@@ -123,11 +123,11 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
               <a
                 css={SocialLink}
                 href={config.twitter}
-                title="Twitter"
+                title="twitter"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter />
+                <twitter />
               </a>
             )}
           </SocialLinks>

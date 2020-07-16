@@ -74,7 +74,7 @@ export const PostFullContent = styled.section`
   blockquote,
   .post-full-comments,
   .footnotes {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 2em 0;
     min-width: 100%;
   }
   @media (max-width: 500px) {
@@ -128,7 +128,7 @@ export const PostFullContent = styled.section`
   img,
   video {
     display: block;
-    margin: 1.5em auto;
+    margin: 1.8em auto;
     max-width: 1040px;
     height: auto;
   }
@@ -286,7 +286,7 @@ export const PostFullContent = styled.section`
     font-weight: 600;
   }
   p + h2 {
-    margin-top: 0.8em;
+    margin-top: 1.8em;
   }
   @media (max-width: 800px) {
     h2 {
@@ -361,13 +361,18 @@ export const PostFullContent = styled.section`
   }
 
   h6 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2rem;
-    font-weight: 700;
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align:center;
+    position: relative;
+    font-weight: 300;
+    top: -23px;
+    margin-bottom: 24px;
   }
   @media (max-width: 800px) {
     h6 {
-      font-size: 1.8rem;
+      font-size: 12px;
       line-height: 1.4em;
     }
   }

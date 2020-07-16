@@ -28,7 +28,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
     <article
       className={`post-card ${post.frontmatter.image ? '' : 'no-image'} ${
         large ? 'post-card-large' : ''
-      }`}
+        }`}
       css={[PostCardStyles, large && PostCardLarge]}
     >
       {post.frontmatter.image && (

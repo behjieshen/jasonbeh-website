@@ -50,6 +50,8 @@ interface PageTemplateProps {
         title: string;
         date: string;
         userDate: string;
+        color: string;
+        link: string;
         image: {
           childImageSharp: {
             fluid: any;
@@ -189,7 +191,10 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
               <PostFullHeader className="post-full-header">
                 <PostFullTags className="post-full-tags">
                   {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                    <Link
+                      style={{ color: post.frontmatter.color }}
+                      to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}
+                    >
                       {post.frontmatter.tags[0]}
                     </Link>
                   )}
@@ -219,6 +224,15 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                       </div>
                     </section>
                   </section>
+                  {post.frontmatter.link && post.frontmatter.link.length > 0 && (
+                    <Link
+                      className="post-visit-button"
+                      style={{ background: post.frontmatter.color }}
+                      to={post.frontmatter.link}
+                    >
+                      Visit Site
+                    </Link>
+                  )}
                 </PostFullByline>
               </PostFullHeader>
 
@@ -245,7 +259,6 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
           relatedPosts={props.data.relatedPosts}
           pageContext={props.pageContext}
         />
-
         <Footer />
       </Wrapper>
     </IndexLayout>
@@ -266,6 +279,16 @@ const PostTemplate = css`
     }
   }
 `;
+
+// export const PostVisitButton = css`
+//   margin-bottom: 30px;
+//   padding: 18px 38px;
+//   background: #a4cf25;
+//   border-radius: 100px;
+//   color: white;
+//   text-decoration: none;
+//   font-size: 14px;
+// `;
 
 export const PostFull = css`
   position: relative;
@@ -343,6 +366,15 @@ const PostFullByline = styled.div`
   /* border-top: 1px solid color(var(--lightgrey) l(+10%)); */
   border-top: 1px solid ${lighten('0.1', colors.lightgrey)};
 
+  .post-visit-button {
+    margin-bottom: 30px;
+    padding: 8px 32px;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
   .post-full-byline-content {
     flex-grow: 1;
     display: flex;
@@ -416,7 +448,6 @@ export const PostFullTitle = styled.h1`
 
 const PostFullImage = styled.figure`
   margin: 25px 0 50px;
-  height: 800px;
   background: ${colors.lightgrey} center center;
   background-size: cover;
   border-radius: 5px;
@@ -458,6 +489,8 @@ export const query = graphql`
         date
         tags
         excerpt
+        color
+        link
         image {
           childImageSharp {
             fluid(maxWidth: 3720) {

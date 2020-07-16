@@ -1,15 +1,8 @@
-- id: Ghost
-  avatar: avatars/ghost.png
-  bio: The professional publishing platform
-  twitter: TryGhost
-  facebook: ghost
-  website: https://ghost.org/
-  location: San Francisco
-- id: Another Author
-  avatar: avatars/ghost.png
-  bio: This is another test author with a profile background image
-  twitter: TryGhost
-  facebook: ghost
-  website: https://ghost.org/
-  location: San Francisco
-  profile_image: img/alex-knight-326705-unsplash.jpg
+- id: Jason Beh
+  avatar: avatars/jason.jpg
+  bio: Gym junkie and tech enthusiast that loves learning
+  twitter: jason-beh
+  facebook: jieshenbeh
+  website: https://jasonbeh.com/
+  location: Kuala Lumpur, Malaysia
+  profile_image: avatars/profile-cover2.jpg
