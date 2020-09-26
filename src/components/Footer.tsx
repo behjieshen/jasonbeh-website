@@ -46,6 +46,7 @@ const SiteFooter = css`
   padding-bottom: 60px;
   color: #fff;
   background: ${setLightness('0.0015', colors.darkgrey)};
+  // background:#69BFEF;
 `;
 
 const SiteFooterContent = css`

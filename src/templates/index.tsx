@@ -99,9 +99,13 @@ const IndexPage: React.FC<IndexProps> = props => {
         >
           <div css={inner}>
             <SiteNav isHome />
-            <SiteHeaderContent className="site-header-conent">
-              <SiteTitle className="site-title">Jason Beh</SiteTitle>
-              <SiteDescription>{config.description}</SiteDescription>
+            <SiteHeaderContent className="site-header-content">
+              <SiteTitle className="site-title" style={{ visibility: 'hidden' }}>
+                Jason Beh
+              </SiteTitle>
+              <SiteDescription style={{ visibility: 'hidden' }}>
+                {config.description}
+              </SiteDescription>
             </SiteHeaderContent>
           </div>
         </div>
@@ -144,7 +148,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    header: file(relativePath: { eq: "img/hero.jpg" }) {
+    header: file(relativePath: { eq: "img/test3.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.

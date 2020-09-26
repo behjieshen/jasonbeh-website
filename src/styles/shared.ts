@@ -126,8 +126,9 @@ export const SiteHeaderStyles = css`
   padding-bottom: 12px;
   color: #fff;
   /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-  background: ${lighten('-0.05', colors.darkgrey)} no-repeat center center;
+  // background: ${lighten('-0.05', colors.darkgrey)} no-repeat center center;
   background-size: cover;
+  background-position: left;
 
   :before {
     content: '';
@@ -138,7 +139,7 @@ export const SiteHeaderStyles = css`
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0, 0, 0, 0.18);
+    // background: rgba(0, 0, 0, 0.18);
   }
   :after {
     content: '';
@@ -150,12 +151,12 @@ export const SiteHeaderStyles = css`
     z-index: 10;
     display: block;
     height: 140px;
-    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    // background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
   }
 
   @media (prefers-color-scheme: dark) {
     :before {
-      background: rgba(0, 0, 0, 0.6);
+      // background: rgba(0, 0, 0, 0.6);
     }
   }
 `;

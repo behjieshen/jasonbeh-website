@@ -9,7 +9,7 @@ import { colors } from '../../styles/colors';
 import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
-import { twitter } from '../icons/twitter';
+// import { twitter } from '../icons/twitter';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -126,9 +126,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 title="twitter"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <twitter />
-              </a>
+              ></a>
             )}
           </SocialLinks>
           {config.showSubscribe && (
